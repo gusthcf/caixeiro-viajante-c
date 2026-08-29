@@ -1,0 +1,28 @@
+# Executáveis gerados
+exe
+*.out
+*.exe
+
+# Objetos e artefatos de compilação
+*.o
+*.obj
+*.a
+*.so
+
+# Artefatos do LaTeX
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+
+# Sistema operacional / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
