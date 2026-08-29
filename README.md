@@ -40,8 +40,7 @@ Como exigido pelo enunciado, a busca é feita por meio de uma **função recursi
 ├── casos-de-teste/         # Caso de teste de exemplo (entrada e saída esperada)
 ├── main.tex                # Fonte LaTeX do relatório
 ├── Relatório_TP1.pdf       # Relatório final entregue
-├── TP.pdf                  # Enunciado original do trabalho
-└── TPFINAL.zip             # Pacote exatamente como submetido no Moodle
+└── TP.pdf                  # Enunciado original do trabalho
 ```
 
 ---
