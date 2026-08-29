@@ -1,6 +1,6 @@
 # Executáveis gerados
 exe
-*.out
+a.out
 *.exe
 
 # Objetos e artefatos de compilação
