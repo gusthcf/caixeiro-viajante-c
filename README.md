@@ -1,12 +1,12 @@
 # TP1 — Problema do Caixeiro Viajante
 
-> 🎓 **Trabalho acadêmico desenvolvido durante o 2º período da graduação em Ciência da Computação (UFOP), no semestre 2023/2.**
+> **Trabalho acadêmico desenvolvido durante o 2º período da graduação em Ciência da Computação (UFOP), no semestre 2023/2.**
 
 Implementação em C de uma solução **exata e recursiva** (backtracking) para o **Problema do Caixeiro Viajante** (*Travelling Salesman Problem* — TSP), construída sobre um Tipo Abstrato de Dados (TAD) de grafo ponderado representado por matriz de adjacências.
 
 ---
 
-## 📚 Contexto acadêmico
+## Contexto acadêmico
 
 | | |
 |---|---|
@@ -21,7 +21,7 @@ Implementação em C de uma solução **exata e recursiva** (backtracking) para 
 
 ---
 
-## 🧩 O problema
+## O problema
 
 Dado um conjunto de `n` cidades e as distâncias entre todas as duplas possíveis, o caixeiro viajante precisa percorrer **todas as cidades exatamente uma vez** e **retornar à cidade de origem** (sempre a cidade `0`), de forma que a **distância total percorrida seja a menor possível**.
 
@@ -29,7 +29,7 @@ Como exigido pelo enunciado, a busca é feita por meio de uma **função recursi
 
 ---
 
-## 🗂️ Estrutura do repositório
+## Estrutura do repositório
 
 ```
 .
@@ -45,7 +45,7 @@ Como exigido pelo enunciado, a busca é feita por meio de uma **função recursi
 
 ---
 
-## 🧱 O TAD `GrafoPon`
+## O TAD `GrafoPon`
 
 ```c
 typedef struct grafoPon {
@@ -72,7 +72,7 @@ Na matriz de adjacências, `matrizAdjacencias[i][j]` guarda a distância da cida
 
 ---
 
-## ⚙️ Compilação e execução
+## Compilação e execução
 
 ### Usando o Makefile
 
@@ -99,12 +99,12 @@ gcc grafoPonderado_tad.o main.o -o exe -lm
 
 ---
 
-## 📥 Formato de entrada
+## Formato de entrada
 
 1. A primeira linha contém `n`, o número de cidades.
 2. Em seguida, `n × n` linhas no formato `origem destino distancia`.
 
-## 📤 Formato de saída
+## Formato de saída
 
 1. Primeira linha: a sequência de cidades do menor caminho, começando e terminando na cidade `0` (com um espaço após cada número de cidade).
 2. Segunda linha: a distância total percorrida.
@@ -149,7 +149,7 @@ O caminho `0 → 1 → 2 → 3 → 0` custa `30 + 15 + 25 + 10 = 80`, sendo o me
 
 ---
 
-## 🧪 Testes e validação
+## Testes e validação
 
 - O programa foi testado com as 5 entradas fornecidas pela disciplina (com 4, 6, 4, 5 e 5 cidades), incluindo casos em que **não há ligação** entre determinadas cidades.
 - A ausência de vazamentos de memória foi verificada com **Valgrind**:
@@ -161,13 +161,13 @@ valgrind --leak-check=full -s ./exe < casos-de-teste/caso1.in
 
 ---
 
-## 📈 Sobre a complexidade
+## Sobre a complexidade
 
 A solução é uma busca exaustiva com backtracking: ela explora todas as permutações possíveis de cidades a partir da cidade `0`, o que resulta em complexidade de tempo **O(n!)**. Isso é adequado para as entradas pequenas propostas pelo trabalho, mas cresce rapidamente com o número de cidades — característica esperada de uma solução exata para o TSP.
 
 ---
 
-## 🧠 Aprendizados
+## Aprendizados
 
 O trabalho consolidou, ainda no segundo período do curso, conceitos fundamentais de Estruturas de Dados:
 
@@ -179,6 +179,6 @@ O trabalho consolidou, ainda no segundo período do curso, conceitos fundamentai
 
 ---
 
-## 📄 Licença
+## Licença
 
 Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais detalhes.
