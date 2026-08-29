@@ -33,14 +33,20 @@ Como exigido pelo enunciado, a busca é feita por meio de uma **função recursi
 
 ```
 .
-├── main.c                  # Ponto de entrada: apenas orquestra as chamadas ao TAD
-├── grafoPonderado_tad.h    # Interface do TAD GrafoPonderado
-├── grafoPonderado_tad.c    # Implementação do TAD e do algoritmo de busca
-├── Makefile                # Automação da compilação
-├── casos-de-teste/         # Caso de teste de exemplo (entrada e saída esperada)
-├── main.tex                # Fonte LaTeX do relatório
-├── Relatório_TP1.pdf       # Relatório final entregue
-└── TP.pdf                  # Enunciado original do trabalho
+├── Makefile                     # Automação da compilação
+├── src/                         # Código-fonte em C
+│   ├── main.c                   # Ponto de entrada: só orquestra as chamadas ao TAD
+│   ├── grafoPonderado_tad.h     # Interface do TAD GrafoPonderado
+│   └── grafoPonderado_tad.c     # Implementação do TAD e do algoritmo de busca
+├── casos-de-teste/              # Casos de teste (entrada e saída esperada)
+│   ├── caso1.in
+│   └── caso1.out
+└── docs/                        # Documentação do trabalho
+    ├── enunciado/
+    │   └── enunciado.pdf        # Enunciado original da disciplina
+    └── relatorio/
+        ├── relatorio.pdf        # Relatório final entregue
+        └── relatorio.tex        # Fonte LaTeX do relatório
 ```
 
 ---
@@ -86,8 +92,8 @@ make run      # executa o programa
 Diretivas equivalentes às usadas na correção da disciplina:
 
 ```bash
-gcc -c grafoPonderado_tad.c -Wall
-gcc -c main.c -Wall
+gcc -c src/grafoPonderado_tad.c -Wall
+gcc -c src/main.c -Wall
 gcc grafoPonderado_tad.o main.o -o exe -lm
 ```
 
@@ -155,7 +161,7 @@ O caminho `0 → 1 → 2 → 3 → 0` custa `30 + 15 + 25 + 10 = 80`, sendo o me
 - A ausência de vazamentos de memória foi verificada com **Valgrind**:
 
 ```bash
-gcc -g -o exe main.c grafoPonderado_tad.c -Wall
+gcc -g -o exe src/main.c src/grafoPonderado_tad.c -Wall
 valgrind --leak-check=full -s ./exe < casos-de-teste/caso1.in
 ```
 

@@ -17,4 +17,4 @@ Cada caso é composto por um par de arquivos:
 ./exe < casos-de-teste/caso1.in | diff - casos-de-teste/caso1.out && echo "OK"
 ```
 
-O `caso1` é o exemplo apresentado no enunciado do trabalho ([TP.pdf](../TP.pdf)).
+O `caso1` é o exemplo apresentado no enunciado do trabalho ([enunciado.pdf](../docs/enunciado/enunciado.pdf)).
